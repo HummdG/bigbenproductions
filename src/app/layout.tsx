@@ -21,7 +21,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://bigbenproduction.co.uk'),
+  metadataBase: new URL('https://bigbenproductions.vercel.app'),
   title: 'Big Ben Production | Premier Events Production',
   description:
     'Professional 360 photo booth experiences, event videography, and full production setups. Big Ben Production creates unforgettable moments for weddings, birthdays, and celebrations.',
