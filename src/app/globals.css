@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-body: var(--font-inter), 'Inter', system-ui, sans-serif;
+
+  /* Brand darks — deep navy-black */
+  --color-black: #070C18;
+  --color-black-soft: #0A1022;
+  --color-black-card: #0D1528;
+  --color-black-border: #192238;
+
+  /* Blue palette — cobalt/electric blue matching the Big Ben Production logo */
+  --color-gold: #2B7DE8;
+  --color-gold-light: #4E9AF5;
+  --color-gold-pale: #C5D9F8;
+  --color-gold-dark: #1A58C0;
+
+  /* Text */
+  --color-text-muted: #4E6070;
+  --color-text-secondary: #7890A0;
+
+  /* Animations */
+  --animate-pulse-ring: pulse-ring 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  --animate-float-in: float-in 0.8s ease forwards;
+  --animate-fade-in: fade-in 0.6s ease forwards;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  80%,
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@utility text-gold-gradient {
+  background: linear-gradient(135deg, #2B7DE8 0%, #4E9AF5 50%, #2B7DE8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility gold-glow {
+  box-shadow: 0 0 20px rgba(43, 125, 232, 0.3);
+}
+
+@utility gold-glow-sm {
+  box-shadow: 0 0 10px rgba(43, 125, 232, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #070C18;
+}
+
+body {
+  background-color: #070C18;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070C18;
+}
+::-webkit-scrollbar-thumb {
+  background: #2B7DE8;
+  border-radius: 3px;
+}
+
+/* Smooth anchor scrolling offset for sticky nav */
+[id] {
+  scroll-margin-top: 80px;
+}
